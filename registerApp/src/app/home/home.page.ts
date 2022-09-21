@@ -14,6 +14,6 @@ export class HomePage implements OnInit {
   }
 
   goToCodeQR() {
-    this.router.navigate(['/login'])
+    this.router.navigate(['/code-qr'])
   }
 }

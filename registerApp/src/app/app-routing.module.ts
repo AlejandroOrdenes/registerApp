@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
+  {
+    path: 'code-qr',
+    loadChildren: () => import('./code-qr/code-qr.module').then( m => m.CodeQrPageModule)
+  },
 ];
 
 @NgModule({

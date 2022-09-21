@@ -9,35 +9,41 @@
     
 }
 
-.logo {
-    width: 40%;
-    margin-bottom: 30%;
-}
-
 
 .btnContainer{
+    display: flex;
+    flex-direction: column;
     width: 70%;
 }
 
-.inputUser{
-    width: 100%;
-}
-.inputPass{
-    width: 100%;
-}
-.inputUsuario{
-    margin-bottom: 15%;
+h1{
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: bold;
 }
 
-.inputContrasena{
-    margin-bottom: 15%;
-}
 
 .btn{
     margin-top: 25px;
-    width: 50%;
+    width: 100%;
+    height: 3rem;
+    
 }
 
+.codeQr{
+    width: 50%;
+    height: 50%;
+    border: 3px;
+    border-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr {
+    width: 100%;
+    height: 100%;
+}
 .btnReset {
     margin-top: 25px;
     width: 50%;
