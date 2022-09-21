@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ResetPassPageRoutingModule } from './reset-pass-routing.module';
+import { HomePageRoutingModule } from './home-routing.module';
 
-import { ResetPassPage } from './reset-pass.page';
+import { HomePage } from './home.page';
 import { MaterialModule } from '../material.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { MaterialModule } from '../material.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    ResetPassPageRoutingModule,
+    HomePageRoutingModule,
     MaterialModule
   ],
-  declarations: [ResetPassPage]
+  declarations: [HomePage]
 })
-export class ResetPassPageModule {}
+export class HomePageModule {}

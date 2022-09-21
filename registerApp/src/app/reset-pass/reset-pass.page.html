@@ -1,9 +1,23 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Restablecer Contraseña</ion-title>
+  <ion-toolbar>  
+    <ion-title><mat-icon (click)="goToLogin()">arrow_back_ios</mat-icon>Restablecer Contraseña</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div id="container">
+    
+    <ion-img class="logo" src="/assets/logoR.png"></ion-img>
+    <div class="btnContainer">
+      <h4>Ingrese su correo para restablecer su contraseña</h4>
+      <mat-form-field class="inputUser" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput >
+        <mat-icon matSuffix>email</mat-icon>
+        <mat-hint></mat-hint>
+      </mat-form-field>
+    </div>
+    <button (click)="sendAlert()" class="btn" mat-stroked-button color="primary">Restablecer</button>
+  </div>
 
 </ion-content>

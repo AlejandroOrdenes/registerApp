@@ -16,4 +16,8 @@ export class LoginPage implements OnInit {
   goToReset() {
     this.router.navigate(['/reset-pass'])
   }
+
+  goToHome() {
+    this.router.navigate(['/home'])
+  }
 }
