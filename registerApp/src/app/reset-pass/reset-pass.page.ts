@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reset-pass',
@@ -8,6 +9,10 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./reset-pass.page.scss'],
 })
 export class ResetPassPage implements OnInit {
+
+  reset = new FormGroup({
+    emailUser: new FormControl('', Validators.required)
+  })
 
   constructor(private router: Router, private alertController: AlertController) { }
 

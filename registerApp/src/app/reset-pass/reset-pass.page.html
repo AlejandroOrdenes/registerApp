@@ -10,14 +10,16 @@
     <ion-img class="logo" src="/assets/logoR.png"></ion-img>
     <div class="btnContainer">
       <h4>Ingrese su correo para restablecer su contraseña</h4>
-      <mat-form-field class="inputUser" appearance="outline">
-        <mat-label>Email</mat-label>
-        <input matInput >
-        <mat-icon matSuffix>email</mat-icon>
-        <mat-hint></mat-hint>
-      </mat-form-field>
+      <form [formGroup]="reset">
+        <mat-form-field class="inputUser" appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" formControlName="emailUser" required >
+          <mat-icon matSuffix>email</mat-icon>
+          <mat-hint></mat-hint>
+        </mat-form-field>
+        <button type="submit" (click)="sendAlert()" class="btn" mat-stroked-button color="primary" [disabled]="reset.invalid">Restablecer</button>
+      </form>
     </div>
-    <button (click)="sendAlert()" class="btn" mat-stroked-button color="primary">Restablecer</button>
   </div>
 
 </ion-content>
