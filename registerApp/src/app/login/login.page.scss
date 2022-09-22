@@ -22,6 +22,14 @@
 
 .btnContainer{
     width: 70%;
+    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .inputUser{
@@ -43,6 +51,11 @@
     width: 50%;
     background-color: #41aabd;
     color: white;
+}
+
+.btn:disabled{
+    background-color: #507d85;
+    color: rgb(204, 202, 202);
 }
 
 .btnReset {
