@@ -1,6 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Login</ion-title>
+    <button class="navbut" (click)="goToAlumno()" mat-stroked-button color="primary">Vista Alumno</button>
   </ion-toolbar>
 </ion-header>
 
@@ -9,7 +10,6 @@
   <div id="container">
     <ion-img class="logo" src="/assets/logoR.png"></ion-img>
     <div class="btnContainer">
-      <h1>{{userName}}</h1>
       <form [formGroup]="login">
         <mat-form-field class="inputUser" appearance="outline">
           <mat-label>Usuario</mat-label>
@@ -24,10 +24,10 @@
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
           </button>
         </mat-form-field>
-        <button type="submit" (click)="goToHome()" class="btn" mat-stroked-button color="primary" [disabled]="login.invalid">Ingresar</button>
+        <button type="submit" (click)="goToHome()" (click)="logins()" class="btn" mat-stroked-button color="primary" [disabled]="login.invalid">Ingresar</button>
       </form>
     </div>
-    <button  (click)="goToReset()" class="btnReset" mat-stroked-button color="primary">Olvido su contraeña?</button>
+    <button  (click)="goToReset()" class="btnReset" mat-stroked-button color="primary">Olvido su contraseña?</button>
   </div>
 
 </ion-content>

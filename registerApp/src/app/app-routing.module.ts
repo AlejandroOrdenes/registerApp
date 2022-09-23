@@ -22,7 +22,15 @@ const routes: Routes = [
   {
     path: 'code-qr',
     loadChildren: () => import('./code-qr/code-qr.module').then( m => m.CodeQrPageModule)
+  },  {
+    path: 'alumno',
+    loadChildren: () => import('./alumno/alumno.module').then( m => m.AlumnoPageModule)
   },
+  {
+    path: 'alumno-scanner',
+    loadChildren: () => import('./alumno-scanner/alumno-scanner.module').then( m => m.AlumnoScannerPageModule)
+  },
+
 ];
 
 @NgModule({

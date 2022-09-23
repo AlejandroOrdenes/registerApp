@@ -21,11 +21,19 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
+  logins(){
+    localStorage.setItem('userName',this.userName)
+  }
+
   goToReset() {
     this.router.navigate(['/reset-pass'])
   }
 
   goToHome() {
     this.router.navigate(['/home'])
+  }
+
+  goToAlumno(){
+    this.router.navigate(['/alumno'])
   }
 }

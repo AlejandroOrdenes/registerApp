@@ -5,7 +5,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(144, 188, 196, 0.377);    
+    background-color: rgba(144, 188, 196, 0.377);
+    
 }
 
 
@@ -14,12 +15,6 @@
     flex-direction: column;
     width: 70%;
 }
-
-h1{
-    font-size: 3rem;
-}
-
-
 .btn{
     margin-top: 25px;
     width: 100%;
@@ -34,6 +29,20 @@ h1{
     border: none;
     
 }
-.fixtittle{
-    font-size: 40px;
+
+h1{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+
+.desc{
+    text-align: center;
+}
+.c_titulo
+{
+    color: #1c5e6a;
+    margin-top: -20%;
+    text-decoration: underline;
 }

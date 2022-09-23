@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <div id="container">
+    <h1 class="title c_titulo">Bienvenido Alumno</h1>
+    <h2 class="desc">Puedes escanear el codigo qr de tu clase con el boton de abajo!</h2>
+    <div class="btnContainer">
+      <button (click)="goToAlumnoScanner()" class="btn"  mat-stroked-button color="primary">Escanear codigo QR
+        <ion-icon slot="end" name="camera"></ion-icon>
+      </button>
+
+    </div>
+  </div>
+
+</ion-content>

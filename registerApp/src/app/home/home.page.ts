@@ -9,11 +9,13 @@ import { LoginPage } from '../login/login.page';
 })
 export class HomePage implements OnInit {
 
-  
+  userName = localStorage.getItem("userName")
 
   constructor(private router: Router) { }
 
   ngOnInit() {
+    console.log("userName: ", this.userName)
+    localStorage.removeItem('userName');
   }
 
   goToCodeQR() {
