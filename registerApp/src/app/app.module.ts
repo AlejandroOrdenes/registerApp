@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { EmailComposer } from '@awesome-cordova-plugins/email-composer/ngx';
+
 
 
 
@@ -23,7 +23,7 @@ import { EmailComposer } from '@awesome-cordova-plugins/email-composer/ngx';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, EmailComposer],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
 
   bootstrap: [AppComponent],
 })

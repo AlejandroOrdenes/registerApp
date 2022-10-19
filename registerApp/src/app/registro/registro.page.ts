@@ -25,15 +25,6 @@ export class RegistroPage implements OnInit {
   imagen: string
   
   
-  registro = new FormGroup({
-    'email': new FormControl("", Validators.required),
-    'firstName': new FormControl("", Validators.required),
-    'lastName': new FormControl("", Validators.required),
-    'phoneNumber': new FormControl("", Validators.required),
-    'password': new FormControl("", Validators.required),
-    'rol': new FormControl("", Validators.required),
-    'imagen': new FormControl("", Validators.required),
-  })
   
   constructor(private http:HttpClient) {
   }

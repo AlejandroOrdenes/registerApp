@@ -7,45 +7,31 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div id="container">
-    <ion-card-header>
-      <ion-card-title>Registro</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <form [formGroup]="registro">
-        <ion-item>
-          <ion-label position="floating">Correo</ion-label>
-          <ion-input formControlName="email"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Nombre</ion-label>
-          <ion-input formControlName="firstName"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Apellido</ion-label>
-          <ion-input formControlName="lastName"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Numero de telefono</ion-label>
-          <ion-input formControlName="phoneNumber"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Contraseña</ion-label>
-          <ion-input formControlName="password" type="password" ></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Rol</ion-label>
-          <ion-input formControlName="rol"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Imagen</ion-label>
-          <ion-input formControlName="imagen"></ion-input>
-        </ion-item>
-        <br>
-        <ion-button class="BtnRegistro" (click)="register()">Registrarse
-        </ion-button>
-      </form>
-    </ion-card-content>
-</div>
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-input [(ngModel)]="email" placeholder="email" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="firstName" placeholder="firstName" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="lastName" placeholder="LastName" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="phoneNumber" placeholder="phoneNumber" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="password" placeholder="password" type="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="rol" placeholder="Rol" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="imagen" placeholder="imagen URL" type="text"></ion-input>
+  </ion-item>
+
+    <br>
+    <ion-button class="BtnRegistro" (click)="register()">Registrarse
+    </ion-button>
+
 </ion-content>
