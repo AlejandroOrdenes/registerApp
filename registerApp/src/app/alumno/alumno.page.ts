@@ -8,9 +8,17 @@ import { Router } from '@angular/router';
 })
 export class AlumnoPage implements OnInit {
 
+  user = JSON.parse(localStorage.getItem("User"))
+  userName = this.user.firstName
+
   constructor(private router: Router) { }
 
   ngOnInit() {
+    localStorage.removeItem('User');
+    if(this.user == null) {
+      this.router.navigateByUrl('/login', {replaceUrl: true})
+    }
+    console.log("User: ", this.user)
   }
 
 

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-reset-pass',
@@ -14,7 +15,19 @@ export class ResetPassPage implements OnInit {
     emailUser: new FormControl('', Validators.required)
   })
 
-  constructor(private router: Router, private alertController: AlertController) { }
+  constructor(private router: Router, private alertController: AlertController, private http: HttpClient) { }
+
+  sendPassword(){
+    this.http.get('http://localhost:3000/users')
+    .subscribe(res => {
+      console.log(res)
+      
+    }, error => {
+      console.log(error)
+      
+    })
+
+  }
 
   ngOnInit() {
   }

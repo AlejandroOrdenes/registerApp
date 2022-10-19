@@ -9,13 +9,19 @@ import { LoginPage } from '../login/login.page';
 })
 export class HomePage implements OnInit {
 
-  userName = localStorage.getItem("userName")
+  user = JSON.parse(localStorage.getItem("User"))
+  userName = this.user.firstName
+
 
   constructor(private router: Router) { }
 
   ngOnInit() {
-    console.log("userName: ", this.userName)
-    localStorage.removeItem('userName');
+    
+    localStorage.removeItem('User');
+    if(this.user == null) {
+      this.router.navigateByUrl('/login', {replaceUrl: true})
+    }
+    console.log("User: ", this.user)
   }
 
   goToCodeQR() {
