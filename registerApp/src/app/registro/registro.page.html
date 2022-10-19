@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar class="navbut">
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -8,36 +8,44 @@
 </ion-header>
 
 <ion-content>
-  <ion-card class="B_Centrito">
+  <div id="container">
     <ion-card-header>
       <ion-card-title>Registro</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <form [formGroup]="formularioRegistro" (keyup.enter)="guardar()">
-        <ion-item>
-          <ion-label position="floating">Nombre</ion-label>
-          <ion-input formControlName="nombre"></ion-input>
-        </ion-item>
+      <form [formGroup]="registro">
         <ion-item>
           <ion-label position="floating">Correo</ion-label>
-          <ion-input formControlName="nombre"></ion-input>
+          <ion-input formControlName="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input formControlName="firstName"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Apellido</ion-label>
+          <ion-input formControlName="lastName"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Numero de telefono</ion-label>
-          <ion-input formControlName="nombre"></ion-input>
+          <ion-input formControlName="phoneNumber"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Contraseña</ion-label>
           <ion-input formControlName="password" type="password" ></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label position="floating">Confirmar contraseña</ion-label>
-          <ion-input formControlName="confirmacionPassword" type="password"></ion-input>
+          <ion-label position="floating">Rol</ion-label>
+          <ion-input formControlName="rol"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Imagen</ion-label>
+          <ion-input formControlName="imagen"></ion-input>
         </ion-item>
         <br>
-        <ion-button class="BtnRegistro" (click)="guardar()">Registrarse
+        <ion-button class="BtnRegistro" (click)="register()">Registrarse
         </ion-button>
       </form>
     </ion-card-content>
-  </ion-card>
+</div>
 </ion-content>
