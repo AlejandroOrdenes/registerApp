@@ -12,6 +12,7 @@ import { EmailComposer } from '@awesome-cordova-plugins/email-composer/ngx';
 
 
 
+
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, 
@@ -23,6 +24,7 @@ import { EmailComposer } from '@awesome-cordova-plugins/email-composer/ngx';
     FormsModule,
     ReactiveFormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, EmailComposer],
+
   bootstrap: [AppComponent],
 })
 export class AppModule {}
