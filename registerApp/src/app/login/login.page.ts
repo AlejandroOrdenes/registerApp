@@ -41,8 +41,19 @@ export class LoginPage implements OnInit {
     this.http.post('http://localhost:3000/users/login', credentials)
     .subscribe(res => {
       localStorage.setItem('User', JSON.stringify(res))
-      this.router.navigateByUrl('home', {replaceUrl: true})
-      console.log(res)
+      
+      let user = JSON.parse(localStorage.getItem("User"))
+      let rolUsuario = user.rol
+      
+      if(rolUsuario == "Alumno") {
+        this.router.navigateByUrl('alumno', {replaceUrl: true})
+      }
+
+      if(rolUsuario == "Profesor") {
+        this.router.navigateByUrl('home', {replaceUrl: true})
+      }
+
+      
     }, error => {
       console.log(error)
       this.presentAlert()
