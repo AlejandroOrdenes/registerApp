@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar class="navbut">
+  <ion-toolbar >
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -7,31 +7,63 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
-  <ion-item>
-    <ion-input [(ngModel)]="email" placeholder="email" type="text"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input [(ngModel)]="firstName" placeholder="firstName" type="text"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input [(ngModel)]="lastName" placeholder="LastName" type="text"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input [(ngModel)]="phoneNumber" placeholder="phoneNumber" type="text"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input [(ngModel)]="password" placeholder="password" type="password"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input [(ngModel)]="rol" placeholder="Rol" type="text"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input [(ngModel)]="imagen" placeholder="imagen URL" type="text"></ion-input>
-  </ion-item>
+<ion-content>
+  <div id="container"> 
+    <div class="btnContainer">
+      <form [formGroup]="registro">
+        <mat-form-field class="M_form" appearance="outline">
+          <mat-label>Correo</mat-label>
+          <input matInput [(ngModel)]="email" type="email" formControlName="correo" required>
+          <mat-icon matSuffix>mail</mat-icon>
+          <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field class="M_form" appearance="outline">
+          <mat-label>Nombre</mat-label>
+          <input matInput [(ngModel)]="firstName" type="firstName" formControlName="name" required>
+          <mat-icon matSuffix>person</mat-icon>
+          <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field class="M_form" appearance="outline">
+          <mat-label>Apellido</mat-label>
+          <input matInput [(ngModel)]="lastName" type="lastName" formControlName="lastNames" required>
+          <mat-icon matSuffix>person</mat-icon>
+          <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field class="M_form" appearance="outline">
+          <mat-label>Contraseña</mat-label>
+          <input matInput [(ngModel)]="password" [type]="hide ? 'password' : 'text'" type="password" formControlName="pass" required>
+          <button type="submit" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+        <mat-form-field class="M_form" appearance="outline">
+          <mat-label>Rol</mat-label>
+          <mat-select matNativeControl matinput  [(ngModel)]="rol" type="rol" formControlName="role" required>
+            <mat-option value="Profesor">Profesor</mat-option>
+            <mat-option value="Alumno">Alumno</mat-option>
+          </mat-select>
+          <mat-icon matSuffix>assignment_ind</mat-icon>
+          <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field class="M_form" appearance="outline">
+          <mat-label>Imagen</mat-label>
+          <input matInput [(ngModel)]="imagen" type="imagen" formControlName="image" required>
+          <mat-icon matSuffix>add_photo_alternate</mat-icon>
+          <mat-hint></mat-hint>
+        </mat-form-field>
+      </form>
 
+ 
+     
+    </div>
+    <button class="btn" mat-stroked-button color="primary"  (click)="register()">Registrarse
+    </button>
     <br>
-    <ion-button class="BtnRegistro" (click)="register()">Registrarse
-    </ion-button>
-
+    <p class="ion-text-center" *ngIf="isLoading">
+     <ion-spinner> </ion-spinner>
+    </p>
+    <br>
+    <button  (click)="goToLogin()" class="btnReset" mat-stroked-button color="primary">Tienes una cuenta? Inicia sesión</button>
+  </div>
+  
 </ion-content>
