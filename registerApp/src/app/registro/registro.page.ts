@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import {AbstractControl, ValidationErrors, ValidatorFn} from '@angular/forms';
+
 
 
 @Component({
@@ -21,12 +23,12 @@ export class RegistroPage implements OnInit {
   rol: string
   imagen: string
   isLoading: boolean = false
-
+//
   registro = new FormGroup({
-    correo: new FormControl('', Validators.required),
-    name: new FormControl('', Validators.required),
-    lastNames: new FormControl('', Validators.required),
-    pass: new FormControl('', Validators.required),
+    correo: new FormControl('',[Validators.minLength(6),Validators.email]),
+    name: new FormControl('', [Validators.required,]),
+    lastNames: new FormControl('',[Validators.required,] ),
+    pass: new FormControl('', Validators.compose([Validators.minLength(6),Validators.pattern(/(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?])/)] )),//Validators.minLength(6),Validators.pattern(/[0-9A-Za-z!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/)] ),//minimo 1 mayuscula y 1 caracter raro $ 
     role: new FormControl('', Validators.required),
     image: new FormControl('', Validators.required),
   })
