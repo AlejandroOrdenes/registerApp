@@ -59,7 +59,6 @@ export class LoginPage implements OnInit {
       this.presentAlert()
     })
 
-    console.log(credentials)
   }
 
 

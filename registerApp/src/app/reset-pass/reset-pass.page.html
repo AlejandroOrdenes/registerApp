@@ -13,7 +13,7 @@
       <form [formGroup]="reset">
         <mat-form-field class="inputUser" appearance="outline">
           <mat-label>Email</mat-label>
-          <input matInput type="email" formControlName="emailUser" required >
+          <input matInput [(ngModel)]="email" type="email" formControlName="emailUser" required >
           <mat-icon matSuffix>email</mat-icon>
           <mat-hint></mat-hint>
         </mat-form-field>

@@ -11,6 +11,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ResetPassPage implements OnInit {
 
+  email: String
+  hasAccount = false
+
   reset = new FormGroup({
     emailUser: new FormControl('', Validators.required)
   })
@@ -18,16 +21,19 @@ export class ResetPassPage implements OnInit {
   constructor(private router: Router, private alertController: AlertController, private http: HttpClient) { }
 
   sendPassword(){
-    this.http.get('http://localhost:3000/users')
+
+    let emailObj = {email: this.email}
+    this.http.post('http://localhost:3000/users/recovery',  emailObj)
     .subscribe(res => {
-      console.log(res)
+      
+      this.sendAlert("Se envio tu contraseña a " + this.email, "EMAIL ENVIADO!!" )
       
     }, error => {
       console.log(error)
-      
-    })
-
+      this.sendAlert(this.email + " no se encontro!", "Error de email!!")
+    }) 
   }
+
 
   ngOnInit() {
   }
@@ -36,10 +42,10 @@ export class ResetPassPage implements OnInit {
     this.router.navigate(['/login'])
   }
 
-  async sendAlert() {
+  async sendAlert(message, header) {
     const alert = await this.alertController.create({
-      header: 'Correo enviado!',
-      message: 'Siga los pasos para restablecer su contraseña',
+      header: header,
+      message: message,
       buttons: ['OK'],
     });
 
