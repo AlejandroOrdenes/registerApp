@@ -1,0 +1,33 @@
+
+#container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(144, 188, 196, 0.377);
+}
+.btnContainer{
+    width: 70%;
+    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.M_form1{
+    width: 100%;
+}
+.M_form2{
+    margin-bottom: 15%;
+}
+.btn{
+    margin-top: 25px;
+    width: 50%;
+    background-color: #41aabd;
+    color: white;
+}

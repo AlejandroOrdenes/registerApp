@@ -30,6 +30,10 @@ const routes: Routes = [
     path: 'alumno-scanner',
     loadChildren: () => import('./alumno-scanner/alumno-scanner.module').then( m => m.AlumnoScannerPageModule)
   },
+  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+  },
 
 ];
 

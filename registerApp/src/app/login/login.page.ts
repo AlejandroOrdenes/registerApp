@@ -74,4 +74,7 @@ export class LoginPage implements OnInit {
   goToAlumno(){
     this.router.navigate(['/alumno'])
   }
+  goToRegistro(){
+    this.router.navigate(['/registro'])
+  }
 }
