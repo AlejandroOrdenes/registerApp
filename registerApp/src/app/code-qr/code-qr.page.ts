@@ -17,4 +17,7 @@ export class CodeQrPage implements OnInit {
     this.router.navigate(['/home'])
   }
 
+  goToAlumnos(){
+    this.router.navigate(['/listado'])
+  }
 }

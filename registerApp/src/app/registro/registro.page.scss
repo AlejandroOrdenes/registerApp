@@ -19,6 +19,16 @@ form{
     align-items: center;
     justify-content: center;
 }
+.fix_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    padding-left: 10%;
+    width: 100%;
+    margin-top: -8%;
+    margin-bottom: -1%;
+}
 .M_form1{
     width: 100%;
 }
@@ -30,4 +40,11 @@ form{
     width: 50%;
     background-color: #41aabd;
     color: white;
+}
+.btnReset {
+    margin-top: 25px;
+    width: 50%;
+    border: none;
+    color: #1c5e6a;
+    
 }

@@ -17,6 +17,7 @@
           <mat-icon matSuffix>mail</mat-icon>
           <mat-hint></mat-hint>
         </mat-form-field>
+        <h5 class="fix_text">El correo debe contener el @ y tambien minimo 6 caracteres</h5>
         <mat-form-field class="M_form" appearance="outline">
           <mat-label>Nombre</mat-label>
           <input matInput [(ngModel)]="firstName" type="firstName" formControlName="name" required>
@@ -36,6 +37,7 @@
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
           </button>
         </mat-form-field>
+        <h5 class="fix_text">La contraseña debe tener una mayuscula, minimo 6 caracteres, un caracter especial y un numero</h5>
         <mat-form-field class="M_form" appearance="outline">
           <mat-label>Rol</mat-label>
           <mat-select matNativeControl matinput  [(ngModel)]="rol" type="rol" formControlName="role" required>

@@ -9,11 +9,11 @@
   <div id="container">
     <h1 class="title">Arquitectura 001A</h1>
     <h2 class="date">Clase 22/10/2021</h2>
-    <div class="codeQr">
-      <ion-img class="qr" src="/assets/codeQr.png"></ion-img>
-    </div>
+    <ion-card-content>
+      <qrcode [qrdata]="'Your data string'" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+    </ion-card-content>
     <div class="btnContainer">
-      
+      <button class="btn" mat-stroked-button color="primary" (click)="goToAlumnos()" >Ver lista de alumnos</button>
       <button class="btn" mat-stroked-button color="primary">Generar codigo QR</button>
     </div>
   </div>
