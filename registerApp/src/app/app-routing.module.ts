@@ -22,7 +22,8 @@ const routes: Routes = [
   {
     path: 'code-qr',
     loadChildren: () => import('./code-qr/code-qr.module').then( m => m.CodeQrPageModule)
-  },  {
+  },
+  {
     path: 'alumno',
     loadChildren: () => import('./alumno/alumno.module').then( m => m.AlumnoPageModule)
   },

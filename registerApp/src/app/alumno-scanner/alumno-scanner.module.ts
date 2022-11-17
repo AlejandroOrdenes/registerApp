@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { AlumnoScannerPageRoutingModule } from './alumno-scanner-routing.module';
 
 import { AlumnoScannerPage } from './alumno-scanner.page';
+import { MaterialModule } from '../material.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AlumnoScannerPageRoutingModule
+    AlumnoScannerPageRoutingModule,
+    MaterialModule
   ],
   declarations: [AlumnoScannerPage]
 })
