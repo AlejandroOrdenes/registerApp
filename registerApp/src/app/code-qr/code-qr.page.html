@@ -9,12 +9,17 @@
   <div id="container">
     <h1 class="title">Arquitectura 001A</h1>
     <h2 class="date">Clase 22/10/2021</h2>
-    <ion-card-content>
-      <qrcode [qrdata]="'Your data string'" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
-    </ion-card-content>
+    <ion-card *ngIf="visibleQr" class="qrContainer">
+      <ion-card-content>
+        <qrcode id="qrParent" (qrCodeURL)="onChangeURL($event)"  [elementType]="'canvas'" [qrdata]="qrCodeString" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+        <a class="downloadQr" [href]="qrCodeDownloadLink" download="qrcode">Download</a>
+        <!-- <a  (click)="send()">Enviar Email</a> -->
+      </ion-card-content>
+    </ion-card>
+    
     <div class="btnContainer">
       <button class="btn" mat-stroked-button color="primary" (click)="goToAlumnos()" >Ver lista de alumnos</button>
-      <button class="btn" mat-stroked-button color="primary">Generar codigo QR</button>
+      <button (click)="generateQR()"  class="btn" mat-stroked-button color="primary">Generar codigo QR</button>
     </div>
   </div>
 

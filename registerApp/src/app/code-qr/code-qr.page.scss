@@ -9,6 +9,22 @@
     
 }
 
+.qrContainer {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.downloadQr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: larger;
+    text-decoration: none;
+}
+
 
 .btnContainer{
     display: flex;

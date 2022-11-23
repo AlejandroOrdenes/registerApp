@@ -8,6 +8,7 @@ import { CodeQrPageRoutingModule } from './code-qr-routing.module';
 
 import { CodeQrPage } from './code-qr.page';
 import { MaterialModule } from '../material.module';
+import { QRCodeModule } from 'angularx-qrcode';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { MaterialModule } from '../material.module';
     FormsModule,
     IonicModule,
     CodeQrPageRoutingModule,
-    MaterialModule
+    MaterialModule,
+    QRCodeModule,
   ],
   declarations: [CodeQrPage]
 })

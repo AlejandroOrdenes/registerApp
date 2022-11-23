@@ -7,14 +7,14 @@
 <ion-content>
   <ion-list *ngIf="users">
     <ion-item *ngFor="let user of users">
-      <ion-item *ngIf=" user.rol == 'Alumno'">
+      <ion-item *ngIf=" user.rol === 'Alumno'">
         <ion-thumbnail slot="start">
           <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
         </ion-thumbnail>
         <ion-label>
           <h3 class="heading">{{user.firstName}} {{user.lastName}}</h3>
           <p>{{user.email}}</p>
-          <p *ngIf=" user.rol == 'Alumno'" > Yo {{user.rol}}  </p>  
+          <p *ngIf=" user.rol === 'Alumno'" > Yo {{user.rol}}  </p>  
           <ion-badge color="dark">Presente</ion-badge>
         </ion-label>
       </ion-item>

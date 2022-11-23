@@ -16,7 +16,7 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
     
-    localStorage.removeItem('User');
+    
     if(this.user == null) {
       this.router.navigateByUrl('/login', {replaceUrl: true})
     }

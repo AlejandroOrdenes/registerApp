@@ -22,7 +22,9 @@ export class ResetPassPage implements OnInit {
 
   sendPassword(){
 
-    let emailObj = {email: this.email}
+    let emailObj = {
+      email: this.email,
+    }
     this.http.post('http://localhost:3000/users/recovery',  emailObj)
     .subscribe(res => {
       
