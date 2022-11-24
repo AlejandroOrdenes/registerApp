@@ -23,6 +23,10 @@ export class AlumnoPage implements OnInit {
 
 
   goToAlumnoScanner() {
+    this.router.navigate(['/alumno-scanner-activo'])
+  }
+  goToAlumnoScannerdes() {
     this.router.navigate(['/alumno-scanner'])
   }
 }
+
