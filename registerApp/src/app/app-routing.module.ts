@@ -38,10 +38,7 @@ const routes: Routes = [
   {
     path: 'listado',
     loadChildren: () => import('./listado/listado.module').then( m => m.ListadoPageModule)
-  },  {
-    path: 'alumno-scanner-activo',
-    loadChildren: () => import('./alumno-scanner-activo/alumno-scanner-activo.module').then( m => m.AlumnoScannerActivoPageModule)
-  },
+  }
 
 
 ];

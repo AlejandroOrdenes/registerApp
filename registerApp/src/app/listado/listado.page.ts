@@ -16,7 +16,7 @@ export class ListadoPage implements OnInit {
 
   ngOnInit(): void {
     const user = localStorage.getItem('User')
-    this.http.get('http://localhost:3000/users').subscribe(res =>{
+    this.http.get('http://192.168.137.1:3000/users').subscribe(res =>{
     this.users = res
     console.log(res)
 
