@@ -1,20 +1,26 @@
-<ion-header>
+<ion-header [hidden]="scanActive">
   <ion-toolbar>
-    <ion-title>Home</ion-title>
+    <ion-title>
+      Bienvenido Alumno {{userName}}
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [style.--background]="scanActive ? '#00000000' :'#fff'">
   
-  <div id="container">
-    <h1 class="title c_titulo">Bienvenido Alumno {{userName}}</h1>
-    <h2 class="desc">Puedes escanear el codigo qr de tu clase con el boton de abajo!</h2>
-    <div class="btnContainer">
-      <button (click)="goToAlumnoScanner()" class="btn"  mat-stroked-button color="primary">Escanear codigo QR
-        <ion-icon slot="end" name="camera"></ion-icon>
-      </button>
+  <ion-button  expand="full" (click)="startScanner()" [hidden]="scanActive">
+    <ion-icon name="scan" slot="start"></ion-icon>
+    Escanear codigo QR
+  </ion-button>
+  <p class="ion-text-center" *ngIf="result && !scanActive">{{ result }}</p>
 
-    </div>
+  <!-- <ion-row class="scanner-buttons" [hidden]="!scanActive">
+    <ion-col class="ion-no-padding">
+      <ion-button expand="full" (click)="stopScanner()" >Parar Scaneo</ion-button>
+    </ion-col>
+  </ion-row> -->
+
+  <div class="scan-box" [hidden]="!scanActive">
+
   </div>
-
 </ion-content>

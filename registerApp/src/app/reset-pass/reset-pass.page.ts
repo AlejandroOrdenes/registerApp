@@ -25,7 +25,7 @@ export class ResetPassPage implements OnInit {
     let emailObj = {
       email: this.email,
     }
-    this.http.post('http://192.168.137.1:3000/users/recovery',  emailObj)
+    this.http.post('http://192.168.0.2:3000/users/recovery',  emailObj)//ip local,anterior 192.168.137.1
     .subscribe(res => {
       
       this.sendAlert("Se envio tu contraseña a " + this.email, "EMAIL ENVIADO!!" )
