@@ -36,7 +36,7 @@ export class LoginPage implements OnInit {
   logins = async () => {
 
       const options = {
-        url: 'http://192.168.0.2:3000/users/login',//ip local,anterior 192.168.137.1
+        url: 'http://192.168.0.2:3000/users/login',
         headers: {
           'Access-Control-Allow-Origin': '*',
           'Content-Type': 'application/json',

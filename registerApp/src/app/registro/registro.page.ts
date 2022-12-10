@@ -51,7 +51,7 @@ export class RegistroPage implements OnInit {
       imagen: this.imagen
     }
 
-    this.http.post('http://192.168.0.2:3000/users/register',user)//ip local,anterior 192.168.137.1
+    this.http.post('http://192.168.0.2:3000/users/register',user)
     .subscribe(res=>{
       this.isLoading = false
       localStorage.setItem('User',JSON.stringify(res))
